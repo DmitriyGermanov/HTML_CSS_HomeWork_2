@@ -110,7 +110,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .top__row__left__content {
   grid-row: 1;
   grid-column: 1;
@@ -243,7 +242,6 @@ body {
   line-height: 19px;
   background-color: white;
 }
-
 @media (max-width: 1024px) {
   .main__navigation {
     padding-left: 16px;
