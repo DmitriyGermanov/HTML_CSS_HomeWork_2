@@ -262,7 +262,7 @@ body {
     grid-template-columns: repeat(3, minmax(auto, 232.33px));
     gap: 19.5px;
   }
-  .catalog__grid__container{
+  .catalog__grid__container {
     gap: 16px;
   }
 }
@@ -303,5 +303,15 @@ body {
     grid-column: 1;
     grid-row: auto;
   }
-
+}
+@media (max-width: 360px) {
+  .catalog__grid__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 300px));
+    gap: 30px;
+    justify-content: center;
+  }
+  .catalog__images {
+    max-width: 100%;
+  }
 }
