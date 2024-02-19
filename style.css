@@ -312,4 +312,10 @@ body {
   .catalog__images {
     max-width: 100%;
   }
+  .first__header__top__right__block {
+    font-size: 12.22vw;
+  }
+  .second__header__top__right__block {
+    font-size: 6.67vw;
+  }
 }
