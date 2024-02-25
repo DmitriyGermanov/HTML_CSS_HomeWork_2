@@ -74,14 +74,14 @@ body {
   transition: transform 0.3s ease-in-out;
   transform: translateY(-100%);
   visibility: hidden;
-  opacity: 0;
   z-index: 4;
 }
 .burger__menu.active {
   transform: translateY(0%);
   visibility: visible;
-  opacity: 1;
-  transition: transform 0.5s;
+}
+.burger__menu.disabled {
+  transform: translateY(-100%);
 }
 .burger__menu__blocks {
   margin-bottom: 20px;

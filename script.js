@@ -10,7 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function hideMenu() {
-    burgerMenu.classList.remove("active");
+    burgerMenu.classList.add("disabled");
+    setTimeout(function () {
+      burgerMenu.classList.remove("active");
+      burgerMenu.classList.remove("disabled");
+    }, 300);
   }
   menuIcon.addEventListener("mouseenter", showMenu);
   burgerMenu.addEventListener("mouseenter", showMenu);
