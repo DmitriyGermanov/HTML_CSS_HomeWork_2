@@ -12,6 +12,7 @@ body {
   background-color: rgb(34, 34, 34);
   padding-top: 18px;
   padding-bottom: 19px;
+  position: relative;
 }
 .main__navigation {
   max-width: 1053px;
@@ -23,11 +24,100 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+.main__menu__icon {
+  padding-right: 33px;
+  cursor: pointer;
+}
+.main__menu__icon:hover + .burger__menu,
+.burger__menu:hover {
+  display: block;
+  opacity: 1;
+}
 .nav__links__left {
   padding-right: 41px;
 }
 .nav__links__right {
   padding-right: 33px;
+}
+.nav__links__right__basket {
+  position: relative;
+}
+.nav__links__right__basket::after {
+  display: flex;
+  content: "0";
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  background-color: rgb(241, 109, 127);
+  color: white;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+}
+.burger__menu {
+  box-sizing: border-box;
+  padding: 32px;
+  width: 232px;
+  height: auto;
+  top: 100%;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 4;
+}
+.burger__menu.active {
+  transform: translateY(0%);
+  visibility: visible;
+  opacity: 1;
+  transition: transform 0.5s;
+}
+.burger__menu__blocks {
+  margin-bottom: 20px;
+}
+.burger__menu__blocks:last-child {
+  margin-bottom: 0;
+}
+.burger__menu__links {
+  list-style-position: inside;
+  list-style-type: none;
+  padding-left: 20px;
+  color: rgb(111, 110, 110);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  margin-bottom: 11px;
+}
+.burger__menu li:last-of-type .burger__menu__links {
+  margin-bottom: 0;
+}
+.burger__menu__main__menu__link {
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  margin-bottom: 24px;
+}
+.burger__menu__header {
+  color: rgb(241, 109, 127);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  margin-bottom: 12px;
 }
 .main__page__header {
   background-color: rgb(241, 228, 230);
